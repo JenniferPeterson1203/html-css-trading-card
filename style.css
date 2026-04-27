@@ -1,21 +1,33 @@
 /* add your CSS here */
 .card-container {
-
+    display: flex;
+    flex-wrap: wrap;
+    border-style: groove;
+    width: 315px;
 }
 
 .card-title {
-
+color:chartreuse;
+margin: 2%;
 }
 
 .card-image {
-
+width:300px;
+margin: 2%;
 }
 
 .bottom-content {
+    border-style: groove;
+    margin: 2%;
+    padding: 3%;
+    word-wrap: break-word;
+    text-align: justify;
 
 }
 
 
 .stats-list {
-
+list-style-type: none;
+text-align: left;
+padding: 0%;
 }
