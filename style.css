@@ -1,33 +1,97 @@
-/* add your CSS here */
+/* Page setup */
+body {
+  margin: 0;
+  padding: 30px;
+  font-family: Arial, sans-serif;
+  background: #eaf3ff;
+}
+
+/* Main card */
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    border-style: groove;
-    width: 315px;
+  width: 330px;
+  margin: 0 auto; /* center card */
+  background: linear-gradient(#fff7cc, #ffeaa0); /* soft yellow gradient */
+  border: 8px solid #f5c542; /* thick yellow border */
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
+/* Top title bar */
 .card-title {
-color:chartreuse;
-margin: 2%;
+  margin: 0;
+  padding: 10px 14px;
+  background: #d93030; /* red header like trading cards */
+  color: white;
+  font-size: 24px;
+
+  /* puts name left, HP right */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/* HP text on the right side */
+.hp {
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffef6e;
+}
+
+/* Image area */
 .card-image {
-width:300px;
-margin: 2%;
+  display: block;
+  width: calc(100% - 20px);
+  height: 190px;
+  margin: 10px;
+  border: 3px solid #2a66b3; /* blue frame */
+  border-radius: 6px;
 }
 
+/* Type label under the image */
+.type-badge {
+  margin: 0 10px 10px 10px;
+  display: inline-block;
+  padding: 6px 10px;
+  background: #2a66b3;
+  color: white;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Bottom text area */
 .bottom-content {
-    border-style: groove;
-    margin: 2%;
-    padding: 3%;
-    word-wrap: break-word;
-    text-align: justify;
-
+  background: #fffdf2;
+  margin: 0 10px 10px 10px;
+  padding: 10px;
+  border: 1px solid #e5d58a;
+  border-radius: 8px;
 }
 
+/* Fun fact style */
+.fact {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #0d3b66;
+}
 
+/* Remove bullets */
 .stats-list {
-list-style-type: none;
-text-align: left;
-padding: 0%;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+/* List spacing */
+.stats-list li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+/* Description paragraph */
+.description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
 }
