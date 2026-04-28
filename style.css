@@ -15,6 +15,9 @@
   --text-muted: #4b5563;   /* softer paragraph color */
   --title-bg: #2a75bb;     /* blue title bar */
   --accent: #0ea5e9;       /* blue accent for highlights */
+  --ocean-top: #c9ecff;    /* top of sky/water background */
+  --ocean-mid: #82c9ef;    /* middle ocean color */
+  --ocean-deep: #3e96cf;   /* deep water color near bottom */
 }
 
 /*
@@ -33,7 +36,12 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: var(--page-bg);
+  background-color: var(--page-bg);
+  background-image:
+    radial-gradient(circle at 20% 12%, rgba(255, 255, 255, 0.55) 0 9%, transparent 10%),
+    radial-gradient(circle at 82% 14%, rgba(255, 255, 255, 0.45) 0 8%, transparent 9%),
+    linear-gradient(180deg, var(--ocean-top) 0%, var(--ocean-mid) 45%, var(--ocean-deep) 100%);
+  background-attachment: fixed;
   color: var(--text-main);
 }
 
@@ -45,6 +53,26 @@ body {
   display: grid;
   place-items: center;
   padding: 20px;
+  position: relative;
+}
+
+/*
+  Subtle wave lines over the ocean background.
+  This stays behind the card and adds texture.
+*/
+.page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    165deg,
+    rgba(255, 255, 255, 0.15) 0,
+    rgba(255, 255, 255, 0.15) 2px,
+    transparent 2px,
+    transparent 24px
+  );
+  opacity: 0.35;
+  pointer-events: none;
 }
 
 /*
@@ -59,6 +87,8 @@ body {
   border-radius: 16px;
   box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 /*
