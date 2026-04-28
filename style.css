@@ -1,33 +1,181 @@
-/* add your CSS here */
+/* =========================================================
+   SHARK CARD STYLESHEET (Pokemon-inspired + beginner friendly)
+   You can copy/paste this entire file into style.css
+   ========================================================= */
+
+/*
+  :root stores reusable color variables.
+  This helps you keep colors consistent and easy to change later.
+*/
+:root {
+  --page-bg: #eef3f8;      /* light page background so card stands out */
+  --card-bg: #fff9df;      /* warm card background (trading-card feel) */
+  --card-border: #f4cf53;  /* yellow border inspired by Pokemon cards */
+  --text-main: #1f2a37;    /* normal text color */
+  --text-muted: #4b5563;   /* softer paragraph color */
+  --title-bg: #2a75bb;     /* blue title bar */
+  --accent: #0ea5e9;       /* blue accent for highlights */
+}
+
+/*
+  Make width and height calculations easier by including padding and border.
+*/
+* {
+  box-sizing: border-box;
+}
+
+/*
+  Body styles:
+  - removes default margin
+  - sets font
+  - centers card on screen using grid
+*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--page-bg);
+  color: var(--text-main);
+}
+
+/*
+  Page wrapper that centers the card both horizontally and vertically.
+*/
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+/*
+  Main card styles:
+  - fixed max width for a classic card shape
+  - rounded corners, border, and shadow for depth
+*/
 .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    border-style: groove;
-    width: 315px;
+  width: min(100%, 360px);
+  background: var(--card-bg);
+  border: 8px solid var(--card-border);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.2);
+  overflow: hidden;
 }
 
+/*
+  Card title bar:
+  - display flex puts "Shark" on left and HP on right
+  - strong colors make it look like a card header
+*/
 .card-title {
-color:chartreuse;
-margin: 2%;
+  margin: 0;
+  padding: 14px 16px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: var(--title-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+/*
+  HP label on the right side of title.
+*/
+.hp {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffec7a;
+}
+
+/*
+  Image takes full card width.
+  Fixed height + object-fit keeps the crop neat.
+*/
 .card-image {
-width:300px;
-margin: 2%;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+  border-top: 3px solid #1d4f82;
+  border-bottom: 3px solid #1d4f82;
 }
 
+/*
+  Type badge under image (simple pill style).
+*/
+.type-badge {
+  margin: 12px 16px 0;
+  display: inline-block;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  background: #1d4f82;
+  border-radius: 999px;
+}
+
+/*
+  Info section at bottom:
+  - light border and padding to separate text content
+*/
 .bottom-content {
-    border-style: groove;
-    margin: 2%;
-    padding: 3%;
-    word-wrap: break-word;
-    text-align: justify;
-
+  margin: 12px 16px 16px;
+  padding: 12px;
+  border: 1px solid #d9d2b3;
+  border-radius: 10px;
+  background: #fffcf0;
 }
 
+/*
+  Interesting fact callout at top of info box.
+*/
+.fact {
+  margin: 0 0 12px;
+  padding: 8px 10px;
+  color: #0d3c6b;
+  background: #e9f6ff;
+  border-left: 4px solid var(--accent);
+  border-radius: 6px;
+}
 
+/*
+  Remove bullet points and add clean spacing between list items.
+*/
 .stats-list {
-list-style-type: none;
-text-align: left;
-padding: 0%;
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+/*
+  Each stats row spacing and readability.
+*/
+.stats-list li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/*
+  Link styling in the list.
+*/
+.stats-list a {
+  color: #0b5ea8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/*
+  Underline link on hover so users know it is clickable.
+*/
+.stats-list a:hover {
+  text-decoration: underline;
+}
+
+/*
+  Description paragraph readability.
+*/
+.description {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.6;
 }
