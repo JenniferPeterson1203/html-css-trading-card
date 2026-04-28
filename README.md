@@ -138,16 +138,16 @@ git push origin main
 
 Before you submit, confirm every item below is true:
 
-- [ ] I replaced all placeholder animal content in `index.html` with my own animal
-- [ ] My animal image loads correctly in the browser
-- [ ] My card has at least 4 stat list items
-- [ ] My card has a fact, a stats list, and a description paragraph
-- [ ] My CSS makes the card look close to the prototype
-- [ ] I used Flexbox to center the card on the page
-- [ ] The card has a border and a box-shadow
-- [ ] I removed the default bullet points from the stats list
-- [ ] I created and committed `reflection.md` with answers to all 3 questions
-- [ ] I opened a Pull Request to the original repo's `main` branch
+- [x] I replaced all placeholder animal content in `index.html` with my own animal
+- [x] My animal image loads correctly in the browser
+- [x] My card has at least 4 stat list items
+- [x] My card has a fact, a stats list, and a description paragraph
+- [x] My CSS makes the card look close to the prototype
+- [x] I used Flexbox to center the card on the page
+- [x] The card has a border and a box-shadow
+- [x] I removed the default bullet points from the stats list
+- [x] I created and committed `reflection.md` with answers to all 3 questions
+- [x] I opened a Pull Request to the original repo's `main` branch
 
 ---
 
